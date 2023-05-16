@@ -15,9 +15,6 @@ app.get('/second', function (req, res) {
     res.send("My Second Page!")
 });
 
-app.get('*', (req, res) => {
-    res.render('error404')
-});
 
 // Middleware
 app.use(express.json());

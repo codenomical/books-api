@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 
 const booksRouter = require('./controllers/booksController');
-const books = require('./models/books');
 
 app.get('/', function (req, res) {
     res.send("Hello Homepage")

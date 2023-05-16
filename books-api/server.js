@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 
-const booksRouter = require('./controllers/booksController');
+const cors= require('cors');
+
+const bookRouter = require('./controllers/bookController');
 
 app.get('/', function (req, res) {
-    res.send("Hello Homepage")
+    res.send("Hello World!")
 });
 
 app.get('/second', function (req, res) {
@@ -13,7 +15,9 @@ app.get('/second', function (req, res) {
 
 app.use(express.json());
 
-app.use('/books', booksRouter);
+app.use('/books', bookRouter);
+
+app.use(cors());
 
 app.listen(3000, function () {
     console.log("I am awake!")

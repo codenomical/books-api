@@ -15,7 +15,6 @@ app.get('/second', function (req, res) {
     res.send("My Second Page!")
 });
 
-
 // Middleware
 app.use(express.json());
 app.use('/books', bookRouter);

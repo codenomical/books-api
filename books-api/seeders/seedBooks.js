@@ -51,3 +51,33 @@ db.Book.deleteMany()
         console.log('Failure!', err);
         process.exit(1);
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Scrapyard
+// for POST Testing on Postman
+// {
+//     "title": "New Book",
+//     "description": "This is a new book.",
+//     "year": 2023,
+//     "quantity": 5,
+//     "imageURL": "https://some-url.com/image.jpg"
+// }

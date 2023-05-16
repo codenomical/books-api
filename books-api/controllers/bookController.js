@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../models');
 const Book = require('../models/books');
 
-
+// GET
 router.get('/seed', (req, res) => {
     Book.insertMany([{
         "title": "The Shinobi Initiative",
@@ -60,12 +60,14 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+// POST
 router.post('/', (req, res) => {
     Book.create(req.body)
         .then(newBook => res.status(201).json(newBook))
         .catch(err => res.status(500).json({ error: err.message }));
 });
 
+// PUT
 router.put('/:id', async (req, res) => {
     try {
         const book = await Book.findById(req.params.id);
@@ -78,6 +80,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+// Delete
 router.delete('/:id', async (req, res) => {
     try {
         const book = await Book.findById(req.params.id);

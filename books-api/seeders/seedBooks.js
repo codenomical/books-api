@@ -46,7 +46,7 @@ db.Book.deleteMany()
     .then(data => {
         console.log("Success!");
         process.exit(0)
-    })
+    }) 
     .catch(err => {
         console.log('Failure!', err);
         process.exit(1);

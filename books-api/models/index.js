@@ -6,4 +6,6 @@ mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true
 });
 
+// model and export
+
 module.exports.Book = require('./books')
